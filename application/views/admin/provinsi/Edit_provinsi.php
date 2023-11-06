@@ -4,7 +4,7 @@
 <!--content -->
 <div class="box box-solid box-success">
   <div class="box-header with-border">
-    <h3 class="box-title"><i class="fa fa-plus"></i> <i class="fa fa-globe"></i> Tambah Provinsi</h3>
+    <h3 class="box-title"><i class="fa fa-pencil"></i> <i class="fa fa-globe"></i>Edit provinsi</h3>
     <div class="box-tools pull-right">
     </div><!-- /.box-tools -->
   </div><!-- /.box-header -->
@@ -21,18 +21,25 @@
    	}?>
     <!--show error message here -->
     <div class="form-group"></div>
-	<form class="form-horizontal" method="post"  action="<?php echo base_url(); ?>admin/Provinsi/create" role="form">
+	<form class="form-horizontal" method="post"  action="<?php echo base_url(); ?>admin/Provinsi/update" role="form">
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Provinsi</label>
+                  <label class="col-sm-2 control-label">ID Provinsi</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" name="provinsi" placeholder="Provinsi" required="required" >
+                    <input type="text" value="<?php echo $provinsi['id_provinsi'];?>"  disabled=disabled class="form-control" name="id_provinsi" placeholder="id Lengkap" >
+                     <input type="hidden" value="<?php echo $provinsi['id_provinsi'];?>"  name="id_provinsi" >
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Ibu Kota</label>
-                  <div class="col-sm-5">
-                   <input type="text" class="form-control" name="kota" rows="4" placeholder="kota">
+                  <label class="col-sm-2 control-label">Nama Provinsi</label>
+                  <div class="col-sm-4">
+                    <input type="text" value="<?php echo $provinsi['nama_provinsi'];?>"  class="form-control" name="provinsi" placeholder="provinsi" >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Ibu Kota </label>
+                  <div class="col-sm-4">
+                    <input type="text" value="<?php echo $provinsi['kota'];?>"  class="form-control" name="kota" placeholder="Kota" >
                   </div>
                 </div>
               </div>
@@ -40,10 +47,10 @@
               </div>
               <div class="col-sm-4">
                   <div class="btn-group">
-                   <button type="reset" class="btn btn-info"><i class="fa fa-refresh"></i>Reset</button>
+                   <button type="reset" class="btn btn-info"><i class="fa fa-refresh"></i> Reset</button>
 				</div>
                    <div class="btn-group">
-                   <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i> Tambah</button>
+                   <button type="submit" class="btn btn-success"><i class="fa fa-pencil"></i> Update</button>
                   </div>
               </div>
               <!-- /.box-footer -->
@@ -55,7 +62,7 @@
   </td>
   </div>
   <div class="box-footer">
-    Menambah Data Provinsi, isi form diatas untuk menambahkan data provinsi. 
+    Update Data Buku Perpustakaan, edit form diatas untuk mengubah data buku. 
   </div><!-- box-footer -->
 </div><!-- /.box -->
 
