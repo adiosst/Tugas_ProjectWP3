@@ -1,9 +1,10 @@
+
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap-datepicker.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/select2/select2.min.css">
 <!--content -->
 <div class="box box-solid box-success">
   <div class="box-header with-border">
-    <h3 class="box-title"><i class="fa fa-plus"></i> <i class="fa fa-globe"></i> Tambah Agama</h3>
+    <h3 class="box-title"><i class="fa fa-pencil"></i> <i class="fa fa-globe"></i>Edit Agama</h3>
     <div class="box-tools pull-right">
     </div><!-- /.box-tools -->
   </div><!-- /.box-header -->
@@ -20,12 +21,19 @@
    	}?>
     <!--show error message here -->
     <div class="form-group"></div>
-	<form class="form-horizontal" method="post"  action="<?php echo base_url(); ?>admin/Agama/create" role="form">
+	<form class="form-horizontal" method="post"  action="<?php echo base_url(); ?>admin/Agama/update" role="form">
               <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">ID Agama</label>
+                  <div class="col-sm-4">
+                    <input type="text" value="<?php echo $agama['id_agama'];?>"  disabled=disabled class="form-control" name="id_agama" placeholder="id Lengkap" >
+                     <input type="hidden" value="<?php echo $agama['id_agama'];?>"  name="id_agama" >
+                  </div>
+                </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Agama</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" name="agama" placeholder="Agama" required="required" >
+                    <input type="text" value="<?php echo $agama['agama'];?>"  class="form-control" name="agama" placeholder="Agama" >
                   </div>
                 </div>
               </div>
@@ -33,23 +41,22 @@
               </div>
               <div class="col-sm-4">
                   <div class="btn-group">
-                   <button type="reset" class="btn btn-info"><i class="fa fa-refresh"></i>Reset</button>
+                   <button type="reset" class="btn btn-info"><i class="fa fa-refresh"></i> Reset</button>
 				</div>
                    <div class="btn-group">
-                   <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i>Tambah</button>
+                   <button type="submit" class="btn btn-success"><i class="fa fa-pencil"></i> Update</button>
                   </div>
               </div>
               <!-- /.box-footer -->
             </form>
   </div>
-  
   <div class="box-footer">
-  <td>
+    <td>
      <div align ="Right"> <a  href="<?php echo base_url(); ?>admin/Agama"  class="btn btn-danger" role="button" data-toggle="tooltip" title="Kembali"></i>Back</a></div>
   </td>
   </div>
-  <div class="box-footer">
-    Menambah Data Agama, isi form diatas untuk menambahkan data Agama. 
+    <div class="box-footer">
+    Update Data Agama, edit form diatas untuk mengubah data Agama. 
   </div><!-- box-footer -->
 </div><!-- /.box -->
 
