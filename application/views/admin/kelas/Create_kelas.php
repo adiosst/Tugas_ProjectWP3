@@ -1,10 +1,9 @@
-
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap-datepicker.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/select2/select2.min.css">
 <!--content -->
 <div class="box box-solid box-success">
   <div class="box-header with-border">
-    <h3 class="box-title"><i class="fa fa-pencil"></i> <i class="fa fa-globe"></i>Edit NIK</h3>
+    <h3 class="box-title"><i class="fa fa-plus"></i> <i class="fa fa-globe"></i>Tambah Profesi</h3>
     <div class="box-tools pull-right">
     </div><!-- /.box-tools -->
   </div><!-- /.box-header -->
@@ -21,19 +20,12 @@
    	}?>
     <!--show error message here -->
     <div class="form-group"></div>
-	<form class="form-horizontal" method="post"  action="<?php echo base_url(); ?>admin/Nim/update" role="form">
+	<form class="form-horizontal" method="post"  action="<?php echo base_url(); ?>admin/Nim/create" role="form">
               <div class="box-body">
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">ID</label>
+                  <label class="col-sm-2 control-label">Profesi</label>
                   <div class="col-sm-4">
-                    <input type="text" value="<?php echo $kelas['id_kelas'];?>"  disabled=disabled class="form-control" name="id_kelas" placeholder="id Lengkap" >
-                     <input type="hidden" value="<?php echo $kelas['id_kelas'];?>"  name="id_kelas" >
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">NIK</label>
-                  <div class="col-sm-4">
-                    <input type="text" value="<?php echo $kelas['kelas'];?>"  class="form-control" name="kelas" placeholder="kelas" >
+                    <input type="text" class="form-control" name="kelas" placeholder="Profesi" required="required" >
                   </div>
                 </div>
               </div>
@@ -41,10 +33,10 @@
               </div>
               <div class="col-sm-4">
                   <div class="btn-group">
-                   <button type="reset" class="btn btn-info"><i class="fa fa-refresh"></i> Reset</button>
+                   <button type="reset" class="btn btn-info"><i class="fa fa-refresh"></i>Reset</button>
 				</div>
                    <div class="btn-group">
-                   <button type="submit" class="btn btn-success"><i class="fa fa-pencil"></i> Update</button>
+                   <button type="submit" class="btn btn-success"><i class="fa fa-plus"></i>Tambah</button>
                   </div>
               </div>
               <!-- /.box-footer -->
@@ -52,11 +44,11 @@
   </div>
   <div class="box-footer">
   <td>
-     <div align ="Right"> <a  href="<?php echo base_url(); ?>admin/Nim"  class="btn btn-danger" role="button" data-toggle="tooltip" title="Kembali"></i>Back</a></div>
+    <div align ="Right"> <a  href="<?php echo base_url(); ?>admin/Nim"  class="btn btn-danger" role="button" data-toggle="tooltip" title="Kembali"></i>Back</a></div>
   </td>
   </div>
   <div class="box-footer">
-    Update Data NIK, edit form diatas untuk mengubah data NIK. 
+    Menambah Data Profesi, isi form diatas untuk menambahkan data Profesi. 
   </div><!-- box-footer -->
 </div><!-- /.box -->
 
